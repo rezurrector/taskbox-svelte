@@ -1,4 +1,3 @@
-
 <script>
   import { createEventDispatcher } from 'svelte';
   const dispatch = createEventDispatcher();
@@ -23,6 +22,7 @@
   /* Reactive declaration (computed prop in other frameworks) */
   $: isChecked = task.state === "TASK_ARCHIVED";
 </script>
+
 
 <div class="list-item {task.state}">
   <label
@@ -54,6 +54,7 @@
       name="title"
       id={`title-${task.id}`}
       placeholder="Input title"
+     style="background-color: red;"
     />
   </label>
   {#if task.state !== 'TASK_ARCHIVED'}
