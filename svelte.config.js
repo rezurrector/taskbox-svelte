@@ -1,4 +1,7 @@
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 export default {
   // Consult https://svelte.dev/docs#compile-time-svelte-preprocess
